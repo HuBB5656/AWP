@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','CanController@index');
+Route::get('/createCandidate','CanController@create');
+Route::post('/storeCandidate','CanController@store');
+Route::get('/getCandidate','CanController@showAll');
+Route::get('/candidate/{id}','CanController@show');
+
+
+
