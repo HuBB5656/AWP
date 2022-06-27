@@ -7,7 +7,7 @@
    @foreach($allCandidate as $candidate)
   
         <div class="g-col-6">
-            <h4><a href="candidate/{{ $candidate->id }}">{{ $candidate->name }}</a></h4>
+            <h4><a href="/candidate/{{ $candidate->id }}">{{ $candidate->name }}</a></h4>
             <small>Selected on {{ $candidate->created_at }}</small>
         </div>
    @endforeach

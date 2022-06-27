@@ -72,7 +72,8 @@ class CanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $candidate = candidate::find($id);
+        return view('inc/editCandidate')->with('candidate',$candidate);
     }
 
     /**
@@ -84,7 +85,18 @@ class CanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'name' => 'required',
+            'category' => 'required',
+            'desc' => 'required'
+        ]);
+        $candidate = candidate::find($id);
+        $candidate->name = $request->input('name');
+        $candidate->category = $request->input('category');
+        $candidate->desc = $request->input('desc');
+        $candidate->save();
+
+        return redirect('/getCandidate')->with('success','candidate is updated !');
     }
 
     /**
@@ -95,6 +107,8 @@ class CanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $candidate = candidate::find($id);
+        $candidate->delete();
+        return redirect('/getCandidate')->with('success','Candidate Deleted');
     }
 }

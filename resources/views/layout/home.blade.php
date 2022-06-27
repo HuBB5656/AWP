@@ -10,7 +10,6 @@
 <body>
     
     <div class="container">
-
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">AWP</a>
@@ -26,7 +25,10 @@
                     <a class="nav-link" href="/createCandidate">Create Candidate</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="getCandidate">Get Canditate</a>
+                    <a class="nav-link" href="/getCandidate">Get Canditate</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/elect">Elect</a>
                   </li>
                  
                 </ul>

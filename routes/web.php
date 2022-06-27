@@ -19,6 +19,8 @@ Route::get('/createCandidate','CanController@create');
 Route::post('/storeCandidate','CanController@store');
 Route::get('/getCandidate','CanController@showAll');
 Route::get('/candidate/{id}','CanController@show');
-
+Route::get('/editCandidate/{id}', 'CanController@edit');
+Route::post('/editCandidate/{id}','CanController@update');
+Route::get('/delete/{id}','CanController@destroy');
 
 
