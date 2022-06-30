@@ -23,4 +23,7 @@ Route::get('/editCandidate/{id}', 'CanController@edit');
 Route::post('/editCandidate/{id}','CanController@update');
 Route::get('/delete/{id}','CanController@destroy');
 
+Route::get('/elect','ElectionController@choose');
+
+
 
